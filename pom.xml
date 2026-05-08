@@ -51,7 +51,9 @@
             <artifactId>spring-retry</artifactId>
         </dependency>
 
-        <!-- AOP - krävs för att @Retryable-annotationen ska fungera (VG) -->
+        <!-- AOP - krävs för att @Retryable-annotationen ska fungera (VG)! AOP är ett koncept som låter Spring "wrapar" dina metoder med extra beteende utan att du skriver det
+  själv. @Retryable fungerar exakt så — Spring fångar felet och försöker igen bakom kulisserna, utan att
+  du behöver skriva en loop. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
