@@ -30,22 +30,55 @@
         <java.version>25</java.version>
     </properties>
     <dependencies>
+
+        <!-- Spring Web MVC - låter oss skapa REST-endpoints! ger oss @RestController, @PostMapping etc.   -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
 
+        <!-- Dev Tools - startar om appen automatiskt när du ändrar kod -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- Spring Retry - försöker anropa AI-API:t igen vid fel (VG) -->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
+        <!-- AOP - krävs för att @Retryable-annotationen ska fungera (VG) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- Swagger / OpenAPI - genererar API-dokumentation automatiskt (VG) -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+
+        <!-- Test-ramverk - JUnit, MockMvc etc. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- WireMock - låter oss fejka det externa AI-API:t i tester!  Låter oss fejka OpenRouter i tester — vi kan simulera 503-fel utan att ha ett riktigt API -->
+        <dependency>
+            <groupId>org.wiremock.integrations</groupId>
+            <artifactId>wiremock-spring-boot</artifactId>
+            <version>3.4.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
