@@ -1,3 +1,6 @@
+# API-nycklar och hemligheter - laddas ALDRIG upp till GitHub
+.env
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar

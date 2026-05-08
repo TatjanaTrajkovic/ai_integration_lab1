@@ -73,6 +73,15 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- spring-dotenv - laser in .env-filen automatiskt vid uppstart.
+             Utan det har biblioteket laser Spring Boot inte .env-filer.
+             Variabler i .env blir tillgangliga via @Value precis som miljövariabler. -->
+        <dependency>
+            <groupId>me.paulschwarz</groupId>
+            <artifactId>spring-dotenv</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
         <!-- WireMock - låter oss fejka det externa AI-API:t i tester!  Låter oss fejka OpenRouter i tester — vi kan simulera 503-fel utan att ha ett riktigt API -->
         <dependency>
             <groupId>org.wiremock.integrations</groupId>
