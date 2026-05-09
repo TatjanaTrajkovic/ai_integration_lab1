@@ -38,6 +38,16 @@ Projektet använder en `.env`-fil för att hålla API-nyckeln säker och utanfö
 
 > Din nyckel hittar du på [openrouter.ai/keys](https://openrouter.ai/keys)
 
+### Alternativ — sätt variabeln direkt i IntelliJ
+
+Om du inte vill använda en `.env`-fil kan du konfigurera miljövariabeln direkt i IntelliJ:
+
+1. Gå till **Run → Edit Configurations**
+2. Välj din Spring Boot-konfiguration
+3. Klicka på **Modify options → Environment variables**
+4. Lägg till: `OPENROUTER_API_KEY=din-nyckel-här`
+5. Klicka **OK** och starta appen med den gröna play-knappen
+
 ---
 
 ## Starta appen lokalt
