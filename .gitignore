@@ -1,6 +1,10 @@
 # API-nycklar och hemligheter - laddas ALDRIG upp till GitHub
 .env
 
+# Mac-systemfiler - ska inte vara med i repot
+.DS_Store
+**/.DS_Store
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
