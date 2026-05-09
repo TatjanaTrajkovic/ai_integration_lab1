@@ -86,8 +86,10 @@ public class LlmClient {
         var request = new OpenRouterRequest(model, messages);
 
         // Skicka POST-anropet och parsa svaret till OpenRouterResponse
+        // Vi anvander den fullstandiga API-sökvägen har (inte i baseUrl)
+        // sa att tester enkelt kan peka om baseUrl till WireMock-servern
         var response = restClient.post()
-                .uri("/chat/completions")
+                .uri("/api/v1/chat/completions")
                 // Authorization-headern krävs av OpenRouter för att identifiera oss
                 .header("Authorization", "Bearer " + apiKey)
                 // Vi skickar JSON
