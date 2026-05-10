@@ -19,7 +19,7 @@ public class LlmClient {
     @Value("${openrouter.api.key}")
     private String apiKey;
 
-    @Value("${openrouter.model:openai/gpt-4o-mini}")
+    @Value("${openrouter.model:google/gemma-4-31b-it:free}")
     private String model;
 
     public LlmClient(RestClient restClient) {
