@@ -20,6 +20,10 @@ En middleware-tjänst byggd i Spring Boot som fungerar som en bro mellan en anv�
 - Maven (eller använd `./mvnw` som ingår i projektet)
 - Ett konto på [openrouter.ai](https://openrouter.ai) för att få en API-nyckel
 
+### AI-modell
+
+Projektet använder **Google Gemma 4 31B** via OpenRouter (`google/gemma-4-31b-it:free`) — en gratis modell som inte kräver någon betalning.
+
 ---
 
 ## Sätt API-nyckel
@@ -115,7 +119,7 @@ Content-Type: application/json
 Interaktiv API-dokumentation finns tillgänglig när appen är igång:
 
 ```
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-ui/index.html
 ```
 
 ---
